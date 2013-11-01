@@ -1,0 +1,41 @@
+FriiDump came to existance thanks to the work by a lot of people, most of which
+are probably not aware of this fact ;). So here is proper credit:
+
+The DVD seed bruteforcing algorithm and code were taken from unscrambler 0.4
+by Victor Muñoz (xt5@ingenieria-inversa.cl,
+http://www.ingenieria-inversa.cl/?lp_lang_pref=en).
+
+The theoritical basis of the dumping methods were suggested in several comments
+to Victor's post. The most important comments came from Victor himself (xt5),
+FuzzyLogic and svpe.
+
+The code to actually perform the dumping was derived from the work of Kevin
+East, AKA SeventhSon (kev@kev.nu, http://www.kev.nu/360/), which, in turn,
+derives from work by a lot of other people. See his page for full details.
+
+Many hints were taken from RawDump, whose author is unknown.
+
+A program that helped me a lot to understand the drive cache behaviour is
+PLScsi by Pat LaVarre (http://members.aol.com/plscsi/).
+
+Nintendo disc structure information was taken from:
+- http://www.gc-linux.org/docs/yagcd.html
+- http://www.wiili.org/index.php/GameCube_Optical_Disc
+
+Code to tell whether a Wii disc contains an update or was inspired by a program
+by wiidevel@stacktic.org. Sorry but I cannot find the URL anymore :(.
+
+Other minor pieces of code were taken from tcpdump (www.tcpdump.org), Python
+(www.python.org) and the glibc printf manpage.
+
+GDR8163B and Windows testing was performed by tasso85.
+
+Thanks also go out to the ConsoleTribe staff for giving me the possibility to
+use their forum for the program support.
+
+Glue, endless hours spent understanding drive cache behaviour and rest of the
+code are by me, Arep <arep@no.net>.
+
+Finally, obvious thanks go out to Nintendo for making all of their great
+consoles, who constantly help me to waste the rest of my spare time I do not
+spend coding ;).
