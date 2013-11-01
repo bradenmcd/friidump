@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+
 # The name of our project is "HELLO".  CMakeLists files in this project can
 # refer to the root source directory of the project as ${HELLO_SOURCE_DIR} and
 # to the root binary directory of the project as ${HELLO_BINARY_DIR}.
@@ -115,8 +117,8 @@ include (InstallRequiredSystemLibraries)
 set (CPACK_PACKAGE_NAME "friidump")
 set (CPACK_PACKAGE_DESCRIPTION_SUMMARY "Dump Nintendo GameCube/Wii discs")
 set (CPACK_PACKAGE_VENDOR "Arep")
-set (CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_CURRENT_SOURCE_DIR}/docs/README")
-set (CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/docs/COPYING")
+set (CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_CURRENT_SOURCE_DIR}/README")
+set (CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/COPYING")
 set (CPACK_PACKAGE_VERSION_MAJOR "0")
 set (CPACK_PACKAGE_VERSION_MINOR "3")
 set (CPACK_PACKAGE_VERSION_PATCH "0")
