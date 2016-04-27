@@ -688,17 +688,26 @@ int main (int argc, char *argv[]) {
 			
 				if(options.allmethods)
 				{
+
+					d = disc_destroy (d);
 					fprintf (stderr, "Trying all methods... This will take a LOOOONG time and generate an insanely long console output :p\n");
 					for(options.command=0;options.command<=4;options.command++)
 					{
 						for(options.dump_method=0;options.dump_method<=9;options.dump_method++)
 						{
 							fprintf (stderr, "Trying with command %d, method %d\n", options.command, options.dump_method);
+							if (!(d = disc_new (options.device, options.command))) 
+							{
+								fprintf (stderr, "Failed to create disc with given options\n");
+								exit(1);
+							}
+
 							out = dologic(d, stats);
 							if(out==true)
 							{
 								break;
 							}
+							d = disc_destroy (d);
 						}
 						if(out==true)
 						{
