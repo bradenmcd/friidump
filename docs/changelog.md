@@ -7,18 +7,27 @@
 ### Jackal, gorelord4e, themabus
 
 - Fixed failing after 1st DL media layer with non-Hitachi methods.
+
 - Fixed still hashing with 'nohash' parameter when resuming.
+
 - Fixed resuming larger files (~4 GB).
+
 - Fixed unscrambling larger files.
+
 - Faster file unscrambling.
+
 - Slight modifications to methods;
   possible performance increase with Hitachi based devices.
+
 - Restructured methods and added some new ones.
+
 - Added layer break information.
+
 - Added current position output when error occurs.
+
 - Added SH-D162A, SH-D162B, SH-D162C & SH-D162D as supported.
 
-  ### 
+  ### 	
 
 # 0.5.2 (10/01/2010)
 
@@ -31,7 +40,7 @@
 - Slight performance increase (~1650 MB/h on LH-18A1H).
 - Added LH-18A1P, LH-20A1H, LH-20A1P to list of supported devices.
 
-  ### 
+  ### 	
 
 # 0.5.1 (01/12/2009)
 
@@ -45,7 +54,7 @@
 
 - Limited recognized Lite-On drives to LH-18A1H.
 
-  ### 
+  ### 	
 # 0.5.0 (27/11/2009)
 
 ### Jackal, Truman, themabus
@@ -62,7 +71,7 @@
   stop, speed, command, type, size
 - Some minor changes and fixes.
 
-  ### 
+  ### 	
 
 # 0.4 (08/03/2008)
 
@@ -70,7 +79,7 @@
 
 - Support for DL Wii DVDs.
 
-  ### 
+  ### 	
 
 # 0.3 (06/10/2007)
 
