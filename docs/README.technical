@@ -1,29 +1,18 @@
 FriiDump Techincal info
 ===============================================================================
 
-This document is a reworking and unification of information found all over the
-net, regarding the structure of Nintendo Gamecube/Wii Optical Discs and how to
-read them on an ordinary DVD-ROM drive. All the due credits can be found in the
-AUTHORS file.
+This document is a reworking and unification of information found all over the net, regarding the structure of Nintendo Gamecube/Wii Optical Discs and how to read them on an ordinary DVD-ROM drive. All the due credits can be found in the AUTHORS file.
 
-
-===============================================================================
 Nintendo Gamecube/Wii Optical Disc (GOD/WOD) structure
 ===============================================================================
 
-In order to understand how a Gamecube or WII Optical Disk is made, let us
-first take a look at a standard DVD-ROM. The complete standard is explained in
-the ECMA-267 Standard.
+In order to understand how a Gamecube or WII Optical Disk is made, let us first take a look at a standard DVD-ROM. The complete standard is explained in the ECMA-267 Standard.
 
-The user data stored on the DVD is divided in blocks, each 2048 bytes long.
-Each 2048-byte block is then encapsulated in a 2064-byte structure, adding some
-other data needed for error-correction and head positioning. A 2064-byte block
-is called a "Data frame", and its logical layout is as follows:
+The user data stored on the DVD is divided in blocks, each 2048 bytes long. Each 2048-byte block is then encapsulated in a 2064-byte structure, adding some other data needed for error-correction and head positioning. A 2064-byte block is called a "Data frame", and its logical layout is as follows:
 
-   4bytes   2bytes      6bytes                 2048bytes             4bytes
- -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
-|     ID    | IED |     CPR_MAI     |        User Data Frame      |    EDC    |
- -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+| 4 bytes | 2 bytes | 6 bytes | 2048 bytes      | 4 bytes |
+| ------- | ------- | ------- | --------------- | ------- |
+| ID      | IED     | CPR_MAI | User Data Frame | EDC     |
 
 - Identification Data (ID): Contains the PSN (Physical Sector Number), info
   about the sector itself, like the layer, reflectivity, zone, etc.
@@ -44,9 +33,9 @@ by 16 consecutive Data Frames: for this and other reasons (again related to
 error correction), data from the DVD are always read in 16-data frame blocks.
 
     4bytes   2bytes      6bytes                 2048bytes            4bytes
- -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
 |     ID    | IED |     CPR_MAI     |        User Data Frame      |    EDC    |
- -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
           ^                         |   2048bytes cipher stream   |
           ^                          -  -  -  -  -  -  -  -  -  -
      Scrambling
@@ -63,9 +52,9 @@ Furthermore, Gamecube/Wii Optical Disks use a slightly different structure for
 the Data Frame, as shown in the following figure:
 
     4bytes   2bytes         2048bytes                6bytes          4bytes
- -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
 |     ID    | IED |      User Data Frame      |      CPR_MAI      |    EDC    |
- -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
                                     |   2048bytes cipher stream   |
                                      -  -  -  -  -  -  -  -  -  -
 
