@@ -1,6 +1,6 @@
 # Changelog
 
-### 
+
 
 ## 0.5.3 (15/03/2010)
 
@@ -17,7 +17,8 @@
 - Added layer break information.
 - Added current position output when error occurs.
 - Added SH-D162A, SH-D162B, SH-D162C & SH-D162D as supported.
-### 
+
+  ### 
 
 # 0.5.2 (10/01/2010)
 
@@ -29,7 +30,8 @@
 - Uniform raw output for all devices: unscrambled data + headers.
 - Slight performance increase (~1650 MB/h on LH-18A1H).
 - Added LH-18A1P, LH-20A1H, LH-20A1P to list of supported devices.
-### 
+
+  ### 
 
 # 0.5.1 (01/12/2009)
 
@@ -59,7 +61,8 @@
 - Additional commandline parameters:
   stop, speed, command, type, size
 - Some minor changes and fixes.
-### 
+
+  ### 
 
 # 0.4 (08/03/2008)
 
