@@ -23,8 +23,7 @@ Note that FriiDump is only useful to dump *original* Nintendo discs. To dump bac
 
 FriiDump came to existance thanks to the work by a lot of people, most of which are probably not aware of this fact ;). Please see the AUTHORS file for the credits.
 
-Supported drives
--------------------------------------------------------------------------------
+## Supported drives
 At the moment the same drives as RawDump are supported. This is due to various reasons, explained in the README.technical file, which also contains information about what is needed to add support for more drives.
 
 Currently supported drives are:
@@ -35,8 +34,7 @@ Currently supported drives are:
 
 Other drives might work, most likely those based on the Hitachi MN103 microcontroller. If you find any of them, please report so that they can be added to the compatibility list.
 
-Installation
--------------------------------------------------------------------------------
+## Installation
 If you are a Windows user, probably you will have downloaded the binaries, either zipped or together with an installer, so the installation should be straightforward.
 
 If you downloaded the sources, you will need to compile them. FriiDump uses CMake, for easy portability, so you will need to get it from cmake.org. On Windows you will also need a compiler like Visual Studio (the only tested one, so far) or CygWin/MinGW. On UNIX just do the following, from the directory where you unpacked the sources into:
@@ -56,13 +54,12 @@ Linux-specific note: You need root privileges to issue certain commands to the D
 
 - Set the setuid bit on the executable: this is the recommended way to run FriiDump under Linux. This way, the code run with superuser privileges will be reduced to a minimum, guaranteeing a certain level of security (note that security-related bugs might exist anyway!!!). Also note that, even when the setuid bit is set, the attempt to open the drive for reading will be done after privileges have been dropped, so you will need explicit read access to the DVD-ROM drive. Usually having the system administrator add you to the "cdrom" group is enough. To set the setuid bit on the executable, run as root:
 
-  ```bash
+```bash
   chown root:root /usr/local/bin/friidump
   chmod u+s /usr/local/bin/friidump
-  ```
+```
 
-Usage
--------------------------------------------------------------------------------
+## Usage
 FriiDump is a command-line program, so you will need to run it from a terminal or a command-prompt under Windows. The basic usage is as follows:
 
 ```bash
@@ -75,8 +72,7 @@ Other options you might want to use are `-1` through `-4`, to set the dump metho
 
 Finally, use `-h` for a listing of all available options.
 
-Performance
--------------------------------------------------------------------------------
+## Performance
 As stated above, FriiDump is not as fast as RawDump. On my PC (Athlon64 3200+), performance is as follows:
 
 | Method | Dump speed  | Gamecube disc dump time | Wii disc dump time |
@@ -88,11 +84,10 @@ As stated above, FriiDump is not as fast as RawDump. On my PC (Athlon64 3200+), 
 
 
 
-Support
--------------------------------------------------------------------------------
+## Support
 I'm releasing this program under the nickname of "Arep". This is because I am not sure about the legal status of the program, and I do not want to encounter any consequences. Actually, I'm pretty sure FriiDump goes against the DMCA, being a program that circumvents copy-protection, but it might be objected that the format used by Nintendo discs is not a copy-protection method, but just their own, undocumented, disc format. Although, I think it can be freely used in Europe and other coutries without laws similar to the DMCA.
 
-For the same reason, I am not putting an e-mail address here (that @no.net you find in the program is obviously a pun), but support will be provided through the forums of the Italian ConsoleTribe forum, at	http://wii.console-tribe.com. If you need help, just open a thread in any section there, even in English: I will *not* reply, but you might stand assured I will read everything you write. FriiDump users are encouraged to help each other there ;).
+For the same reason, I am not putting an e-mail address here (that @no.net you find in the program is obviously a pun), but support will be provided through the forums of the Italian ConsoleTribe forum, at http://wii.console-tribe.com. If you need help, just open a thread in any section there, even in English: I will *not* reply, but you might stand assured I will read everything you write. FriiDump users are encouraged to help each other there ;).
 
 Patches are welcome, too: just attach them to your post, and maybe put something like "[PATCH]" in the topic subject, so that I can easily spot them.
 
@@ -100,8 +95,7 @@ New releases will be announced on that forum, and also on QJ.net, if I find a go
 
 If you want to donate to the project, do not do it, and donate to one of the free Wii modchip projects out there, such as OpenWii, WiiFree or YAOSM.
 
-Disclaimer
--------------------------------------------------------------------------------
+## Disclaimer
 FriiDump is distributed under the GNU General Public License version 2. See the COPYING file for details.
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
