@@ -1,7 +1,5 @@
 # Changelog
 
-
-
 ## 0.5.3 (15/03/2010)
 
 ### Jackal, gorelord4e, themabus
