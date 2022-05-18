@@ -25,7 +25,7 @@
  * As Nintendo GameCube/Wii discs use the standars DVD-ROM scrambling algorithm, but with different, unknown, seeds, the actual seeds have to be brute-forced.
  * The functions in this file take care of the brute-forcing and of the actual unscrambling of the read sectors.
  *
- * The code in this file has been derived from unscrambler 0.4, Copyright (C) 2006 Victor Muñoz (xt5@ingenieria-inversa.cl), GPL v2+,
+ * The code in this file has been derived from unscrambler 0.4, Copyright (C) 2006 Victor MuÃ±oz (xt5@ingenieria-inversa.cl), GPL v2+,
  * http://www.ingenieria-inversa.cl/?lp_lang_pref=en .
  */
 
@@ -48,7 +48,7 @@
 /*! \brief Number of bytes of a sector on which the EDC is calculated */
 #define EDC_LENGTH (RAW_SECTOR_SIZE - 4)		/* The EDC value is contained in the bottom 4 bytes of a frame */
 
-
+u_int8_t disctype;
 /*! \brief A structure that represents a seed
  */
 typedef struct t_seed {
