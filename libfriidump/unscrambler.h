@@ -31,7 +31,7 @@ typedef struct unscrambler_s unscrambler;
    the progress function the same format we use elsewhere */
 typedef void (*unscrambler_progress_func) (bool start, u_int32_t current_sector, u_int32_t total_sectors, void *progress_data);
 
-u_int8_t disctype;
+//u_int8_t disctype;
 
 FRIIDUMPLIB_EXPORT unscrambler *unscrambler_new (void);
 FRIIDUMPLIB_EXPORT void *unscrambler_destroy (unscrambler *u);
