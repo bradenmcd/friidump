@@ -72,7 +72,7 @@ Docker
 ===============================================================================
 
 $ docker build -f Docker/Dockerfile -t friidump .
-$ docker run --rm --name friidump --privileged -v /dev/sr0:/dev/cdrom friidump -d /dev/cdrom -a
+$ docker run --rm --name friidump --privileged -v /dev/sr0:/dev/cdrom -v ${PWD}:/data aphex3k/friidump:latest -d /dev/cdrom -a
 
 ===============================================================================
 Installation
