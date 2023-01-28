@@ -67,6 +67,12 @@ Other drives might work, most likely those based on the Hitachi MN103
 microcontroller. If you find any of them, please report so that they can be
 added to the compatibility list.
 
+===============================================================================
+Docker
+===============================================================================
+
+$ docker build -f Docker/Dockerfile -t friidump .
+$ docker run --rm --name friidump --privileged -v /dev/sr0:/dev/cdrom friidump -d /dev/cdrom -a
 
 ===============================================================================
 Installation
